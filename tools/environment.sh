@@ -32,7 +32,7 @@ export SDLTTF_VERSION=2.0.10
 export FT_VERSION=2.4.8
 export XML2_VERSION=2.7.8
 export XSLT_VERSION=1.1.26
-export LXML_VERSION=2.3.1
+export LXML_VERSION=3.3.4
 export FFI_VERSION=3.0.13
 
 # where the build will be located

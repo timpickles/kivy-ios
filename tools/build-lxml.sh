@@ -103,10 +103,10 @@ XSLT_CONFIG=$PREFIX/bin/xslt-config
 #pushd src
 #find . -name *.pyx -exec $KIVYIOSROOT/tools/cythonize.py {} \;
 #popd
-find . -name *.pyx -exec $CYTHON {} \;
+#find . -name *.pyx -exec $CYTHON {} \;
 
-try $HOSTPYTHON setup.py build_ext 
-try $HOSTPYTHON setup.py install -O2 --root iosbuild
+try $HOSTPYTHON setup.py build_ext  --without-cython
+try $HOSTPYTHON setup.py install -O2 --root iosbuild --without-cython
 
 find iosbuild/ | grep -E '*\.(py|pyc|so\.o|so\.a|so\.libs)$$' | xargs rm
 rm -rdf "$BUILDROOT/python/lib/python2.7/site-packages/lxml"
